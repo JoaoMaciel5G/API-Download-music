@@ -6,7 +6,7 @@ const download = new DownloadController()
 
 router.post("/download", download.execute)
 router.get("/", (request, response)=>{
-    return response.json({message: "Start"})
+    return response.json({message: "Running"})
 })
 
 export default router
