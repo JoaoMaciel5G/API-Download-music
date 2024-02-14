@@ -30,6 +30,7 @@ export class DownloadController {
             response.setHeader('Content-Type', 'audio/mpeg');
             video.pipe(response)
         } catch (error) {
+            console.log(error.message)
             response.status(500).json({error: `Erro no download ${error}`})
         }
     }
